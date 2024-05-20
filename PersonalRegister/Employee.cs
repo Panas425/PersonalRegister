@@ -9,21 +9,21 @@ namespace PersonalRegister
     internal class Employee
     {
 
-        private List<(string userName, double rate)> users;
+        private List<(string name, double rate)> users;
 
         public Employee() { 
-            users = new List<(string userName, double rate)> ();
+            users = new List<(string name, double rate)> ();
         }
 
-        public void Add (string userName, double rate)
+        public void Add (string name, double rate)
         {
-            users.Add((userName, rate));
+            users.Add((name, rate));
         }
 
         public void DisplayUsers() { 
             foreach (var user in users)
             {
-                Console.WriteLine($"User: {user.userName}, Rate: {user.rate}");
+                Console.WriteLine($"User: {user.name}, Rate: {user.rate}");
             }
         }
     }
