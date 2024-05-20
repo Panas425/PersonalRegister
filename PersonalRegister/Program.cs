@@ -10,6 +10,25 @@ namespace PersonalRegister
     {
         static void Main(string[] args)
         {
+            Employee register = new Employee();
+
+            while (true)
+            {
+                Console.WriteLine("Enter name, exit to finish");
+                string name = Console.ReadLine();
+                if (name == "exit")
+                {
+                    break;
+                }
+                Console.WriteLine("Enter rate");
+                double rate = double.Parse(Console.ReadLine());
+                register.Add(name, rate);
+
+            }
+            register.DisplayUsers();
+            Console.ReadLine();
+
+
         }
     }
 }
